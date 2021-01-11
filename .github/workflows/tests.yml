@@ -54,6 +54,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: Prettier check
+      continue-on-error: true
       run: |
         npm install
         npx prettier -c src/**/*md
